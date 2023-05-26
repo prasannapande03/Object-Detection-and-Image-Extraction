@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Authentication</title>
+    <meta name="description" content = "">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "">
+</head>
+<body>
+
+    {% for message in messages %} 
+    <div class = "alert alert -{{ message.tags }} alert-dismissible fade show" role = "alert">
+        <strong>Message:</strong> {{ message }}
+            <button type = "button" class = "close" data-dismiss = "alert" aria-label = "Close">
+                <span aria-hidden = "true">×</span>
+            </button>
+    </div>
+    {% endfor %}
+
+    <h3>USER LOGIN</h3>
+
+    <!-- {% if user.is_authenticated %} 
+    <h3>Hello {{ fname }}</h3>
+    <h4>Logged in successfully. This is the register.html page</h4>
+    <button type="submit"><a href ="/signout">SignOut</a></button><br> -->
+
+    <!-- {% else %}  -->
+    <button type="submit"><a href ="/signup">SignUp</a></button><br>
+    <button type="submit"><a href ="/signin">SignIn</a></button><br>
+    <!-- {% endif %} -->
+
+    <script src="" async defer></script>
+</body>
+</html>

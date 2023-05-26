@@ -1,0 +1,12 @@
+<h1>Extracted Images</h1>
+
+<h3>Click on the image to download the image</h3>
+
+{% for extracted_img in processed_image %}
+<!-- <img src = "{{ extracted_img.ext_img.url }}" alt="Processed Extracted Image" height="25%" width="25%"> -->
+<a href="{{ extracted_img.ext_img.url }}" download>
+    <img src="{{ extracted_img.ext_img.url }}" alt="Processed Extracted Image">
+  </a>
+{% endfor %}
+
+<button type ="submit" class="btn btn-lg btn-success"><a href="/signout">Log Out</button>
